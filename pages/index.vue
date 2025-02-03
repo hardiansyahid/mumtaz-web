@@ -1,5 +1,7 @@
 <template>
   <div>
+    <AppHeader/>
+
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex align-items-center">
 
@@ -292,17 +294,29 @@
 
     </main>
     <!-- End #main -->
+
+    <app-footer/>
   </div>
 </template>
 
 <script>
+import AppHeader from "~/layouts/AppHeader.vue";
+import AppFooter from "~/layouts/AppFooter.vue";
+
 export default {
+  components: {AppFooter, AppHeader},
+  data(){
+    return{
+      APP_IOS_URL : "https://apps.apple.com/id/app/mumtaz-swimming-course/id6469479589?l=id",
+      APP_ANDROID_URL : "https://play.google.com/store/apps/details?id=com.skly.mumtaz"
+    }
+  },
   methods:{
     downloadAndroid(){
-      window.open(dotenv('APP_IOS_URL'))
+      window.open(this.APP_ANDROID_URL)
     },
     downloadIOS(){
-      window.open(dotenv('APP_ANDROID_URL'))
+      window.open(this.APP_IOS_URL)
     }
   }
 }

@@ -38,17 +38,7 @@ useHead({
 
 <template>
   <div>
-    <header>
-      <h1>Mumtaz Swimming Course</h1>
-    </header>
-
-    <main>
-      <slot />
-    </main>
-
-    <footer>
-      <p>© 2024 Mumtaz Swimming Course</p>
-    </footer>
+    <slot />
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
       <i class="bi bi-arrow-up-short"></i>
