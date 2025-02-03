@@ -15,6 +15,7 @@
           </nuxt-link>
         </div>
       </div>
+
     </div>
   </div>
 </template>

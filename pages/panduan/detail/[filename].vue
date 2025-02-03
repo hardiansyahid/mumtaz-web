@@ -39,14 +39,9 @@ export default {
   },
   created() {
     const filename = this.$route.params.filename;
-    console.log(this.$route)
-    console.log("Filename from route:", filename);
+
     const pdfUrl = `/assets/panduan/${filename}.pdf`;
     const googleViewerUrl = `https://docs.google.com/gview?url=${pdfUrl}&embedded=true`;
-
-    console.log('Filename:', filename);
-    console.log('PDF URL:', pdfUrl);
-    console.log('Google Viewer URL:', googleViewerUrl);
 
     this.namaPanduan = filename;
     this.pdfUrl = pdfUrl;
